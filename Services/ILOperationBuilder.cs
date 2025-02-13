@@ -1,60 +1,4 @@
-﻿//using System.Reflection.Emit;
-//using DynamicOperations.Core.Interfaces;
-//using DynamicOperations.Core.Models;
-
-//namespace DynamicOperations.Core.Services;
-
-///// <summary>
-///// Implements the creation of IL operations
-///// </summary>
-//public class ILOperationBuilder : IOperationBuilder
-//{
-//    private static readonly Type[] ParameterTypes = { typeof(int), typeof(int) };
-
-//    public Operation BuildOperation(OperationType operationType)
-//    {
-//        var config = GetOperationConfig(operationType);
-//        var method = new DynamicMethod(config.MethodName, typeof(int), ParameterTypes, false);
-//        var dynamicIlInfo = method.GetDynamicILInfo();
-
-//        var localVarSigHelper = SignatureHelper.GetLocalVarSigHelper();
-//        dynamicIlInfo.SetLocalSignature(localVarSigHelper.GetSignature());
-//        dynamicIlInfo.SetCode(config.ILBytes, config.CodeSize);
-
-//        return (Operation)method.CreateDelegate(typeof(Operation));
-//    }
-
-//    private static ILOperationConfig GetOperationConfig(OperationType operationType) => operationType switch
-//    {
-//        OperationType.Addition => new ILOperationConfig(
-//            ILByteProvider.GetAdditionILBytes(),
-//            2,
-//            "Addition"),
-//        OperationType.Subtraction => new ILOperationConfig(
-//            ILByteProvider.GetSubtractionILBytes(),
-//            2,
-//            "Subtraction"),
-//        OperationType.Multiplication => new ILOperationConfig(
-//            ILByteProvider.GetMultiplicationILBytes(),
-//            2,
-//            "Multiplication"),
-//        OperationType.Division => new ILOperationConfig(
-//            ILByteProvider.GetDivisionILBytes(),
-//            2,
-//            "Division"),
-//        OperationType.Modulo => new ILOperationConfig(
-//            ILByteProvider.GetModuloILBytes(),
-//            2,
-//            "Modulo"),
-//        OperationType.Xor => new ILOperationConfig(
-//            ILByteProvider.GetXorILBytes(),
-//            2,
-//            "Xor"),
-//        _ => throw new ArgumentException($"Operation type {operationType} not supported.")
-//    };
-//}
-
-using System.Reflection.Emit;
+﻿using System.Reflection.Emit;
 using DynamicOperations.Core.Interfaces;
 using DynamicOperations.Core.Models;
 
@@ -106,7 +50,7 @@ public class ILOperationBuilder : IOperationBuilder
                 throw new ArgumentException($"Operation type {operationType} not supported.");
         }
 
-        // Return the result
+        // Result
         generator.Emit(OpCodes.Ret);
 
         return (Operation)method.CreateDelegate(typeof(Operation));

@@ -10,7 +10,7 @@ public class Program
         var operationBuilder = new ILOperationBuilder();
         var operationManager = new DynamicOperationManager(operationBuilder);
 
-        // Example: Perform addition
+        // Perform addition
         int result = operationManager.ExecuteOperation(
             OperationType.Addition,
             35435344,
@@ -19,7 +19,6 @@ public class Program
 
         Console.WriteLine($"Result: {result}");
 
-        // You can test other operations similarly
         var subtractionResult = operationManager.ExecuteOperation(
             OperationType.Subtraction,
             1000,

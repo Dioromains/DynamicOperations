@@ -32,12 +32,12 @@ This component serves as one piece of a larger code obfuscation solution by:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Dioromains/DynamicILEmitter.git
+git clone https://github.com/Dioromains/DynamicOperations.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd DynamicILEmitter
+cd DynamicOperations
 ```
 
 3. Build the project:

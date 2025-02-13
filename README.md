@@ -1,4 +1,4 @@
-# DynamicILEmitter
+# DynamicOperations
 
 A .NET library component designed for dynamic IL code generation, primarily serving as a module within a larger code obfuscation toolkit. This project demonstrates the possibility to replace standard arithmetic operations with dynamically generated IL instructions at runtime, making the code harder to reverse engineer while maintaining full functionality.
 

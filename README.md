@@ -92,10 +92,6 @@ This project demonstrates:
 - The IL byte arrays are hardcoded for demonstration purposes
 - Not recommended for production use without proper testing and validation
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## 🙏 Acknowledgments
 
 - Inspired by the capabilities of .NET's Reflection.Emit namespace
